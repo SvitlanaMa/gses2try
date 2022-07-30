@@ -220,7 +220,7 @@ func main() {
 	
 	fmt.Printf("GSES2 BTC application\nСервер розпочав роботу. Ласкаво просимо!\n\n")
 
-	err := http.ListenAndServe(":3333", nil)
+	err := http.ListenAndServe("gses2.app:3333", nil)
 	if errors.Is(err, http.ErrServerClosed) {
 		fmt.Printf("Помилка серверу, сервер закрито\n")
 	} else if err != nil {
